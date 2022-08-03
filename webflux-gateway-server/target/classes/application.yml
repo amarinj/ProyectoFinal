@@ -1,0 +1,21 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: service-persons
+        uri: lb://service-persons
+        predicates:
+          - Path=/api/persons/**
+        filters:
+          - StripPrefix=2
+          - VerifyCookie=Hola mi mensaje personalizado, usuario, AldoMarin
+      - id: service-accounts
+        uri: lb://service-accounts
+        predicates:
+          - Path=/api/accounts/**
+        filters:
+          - StripPrefix=2
+          - AddRequestHeader=token-request, 123456
+          - AddResponseHeader=token-response, 12345678
+          - SetResponseHeader=Content-Type, text/plain
+          - AddRequestParameter=nombre, andres
