@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.bootcamp26.webflux.purse.apirest.app.WebfluxPurseApirestApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 11.222 s <<< FAILURE! - in com.bootcamp26.webflux.purse.apirest.app.WebfluxPurseApirestApplicationTests
+crearSolicitudCompra2Test  Time elapsed: 0.035 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.transactionPurse.id"
+	at com.bootcamp26.webflux.purse.apirest.app.WebfluxPurseApirestApplicationTests.crearSolicitudCompra2Test(WebfluxPurseApirestApplicationTests.java:85)
+Caused by: com.jayway.jsonpath.PathNotFoundException: Missing property in path $['transactionPurse']
+
+listarTest  Time elapsed: 0.03 s  <<< FAILURE!
+java.lang.AssertionError: Response body expected:<null> but was:<[com.bootcamp26.webflux.purse.apirest.app.models.documents.TransactionPurse@6802c10e, com.bootcamp26.webflux.purse.apirest.app.models.documents.TransactionPurse@341889a1, com.bootcamp26.webflux.purse.apirest.app.models.documents.TransactionPurse@29693b1d, com.bootcamp26.webflux.purse.apirest.app.models.documents.TransactionPurse@3a225534, com.bootcamp26.webflux.purse.apirest.app.models.documents.TransactionPurse@44d6f9cf]>
+	at com.bootcamp26.webflux.purse.apirest.app.WebfluxPurseApirestApplicationTests.listarTest(WebfluxPurseApirestApplicationTests.java:59)
+
